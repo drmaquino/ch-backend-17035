@@ -1,0 +1,18 @@
+Welcome to Node.js v16.5.0.
+Type ".help" for more information.
+> a = { a:1 , b: 2 , c: [  1, 2, 3 ]}
+{ a: 1, b: 2, c: [ 1, 2, 3 ] }
+> JSON.stringify(a)
+'{"a":1,"b":2,"c":[1,2,3]}'
+> a.a
+1
+> str = JSON.stringify(a)
+'{"a":1,"b":2,"c":[1,2,3]}'
+> str.length
+25
+> o = JSON.parse(str)
+{ a: 1, b: 2, c: [ 1, 2, 3 ] }
+> o.b
+2
+> 
+

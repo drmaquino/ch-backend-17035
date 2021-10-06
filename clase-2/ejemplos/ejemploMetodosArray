@@ -1,0 +1,109 @@
+Welcome to Node.js v16.5.0.
+Type ".help" for more information.
+> const crearPersona = (nombre, edad) => ({ nombre, edad, saludar: ()=>{ console.log(`hola, soy ${nombre}`)}) 
+const crearPersona = (nombre, edad) => ({ nombre, edad, saludar: ()=>{ console.log(`hola, soy ${nombre}`)})
+                                                                                                          ^
+
+Uncaught SyntaxError: Unexpected token ')'
+> const crearPersona = (nombre, edad) => ({ nombre, edad, saludar: ()=>{ console.log(`hola, soy ${nombre}`}}) 
+const crearPersona = (nombre, edad) => ({ nombre, edad, saludar: ()=>{ console.log(`hola, soy ${nombre}`}})
+                                                                                                      ^^
+
+Uncaught SyntaxError: missing ) after argument list
+> const crearPersona = (nombre, edad) => ({ nombre, edad, saludar: ()=>{ console.log(`hola, soy ${nombre}`)}})
+undefined
+> crearPersona
+[Function: crearPersona]
+> crearPersona('pepe', 25)
+{ nombre: 'pepe', edad: 25, saludar: [Function: saludar] }
+> p = crearPersona('pepe', 25)
+{ nombre: 'pepe', edad: 25, saludar: [Function: saludar] }
+> p.nombre
+'pepe'
+> p.saludar
+[Function: saludar]
+> p.saludar()
+hola, soy pepe
+undefined
+> ps = []
+[]
+> nombres = 'abcde'
+'abcde'
+> for (let i=0;i<nombres.length;i++){ps[nombres[i]]=crearPersona(nombres[i], i+1)}
+{ nombre: 'e', edad: 5, saludar: [Function: saludar] }
+> ps
+[
+  a: { nombre: 'a', edad: 1, saludar: [Function: saludar] },
+  b: { nombre: 'b', edad: 2, saludar: [Function: saludar] },
+  c: { nombre: 'c', edad: 3, saludar: [Function: saludar] },
+  d: { nombre: 'd', edad: 4, saludar: [Function: saludar] },
+  e: { nombre: 'e', edad: 5, saludar: [Function: saludar] }
+]
+> for (const p of ps) { p.saludar() }
+undefined
+> ps = []
+[]
+> for (let i=0;i<nombres.length;i++){ps.push(crearPersona(nombres[i], i+1))}
+5
+> ps
+[
+  { nombre: 'a', edad: 1, saludar: [Function: saludar] },
+  { nombre: 'b', edad: 2, saludar: [Function: saludar] },
+  { nombre: 'c', edad: 3, saludar: [Function: saludar] },
+  { nombre: 'd', edad: 4, saludar: [Function: saludar] },
+  { nombre: 'e', edad: 5, saludar: [Function: saludar] }
+]
+> ps[0].saludar()
+hola, soy a
+undefined
+> for (const p of ps) { p.saludar() }
+hola, soy a
+hola, soy b
+hola, soy c
+hola, soy d
+hola, soy e
+undefined
+> ps.forEach( p => console.log(p) )
+{ nombre: 'a', edad: 1, saludar: [Function: saludar] }
+{ nombre: 'b', edad: 2, saludar: [Function: saludar] }
+{ nombre: 'c', edad: 3, saludar: [Function: saludar] }
+{ nombre: 'd', edad: 4, saludar: [Function: saludar] }
+{ nombre: 'e', edad: 5, saludar: [Function: saludar] }
+undefined
+> ps.forEach( p => p.saludar() )
+hola, soy a
+hola, soy b
+hola, soy c
+hola, soy d
+hola, soy e
+undefined
+> 1+1
+2
+> console.log(4)
+4
+undefined
+> i = 0
+0
+> buscado = null
+null
+> while (!buscado && i < ps.length){
+... if (ps[]
+> buscado = ps.find( p => p.nombre === 'c' )
+{ nombre: 'c', edad: 3, saludar: [Function: saludar] }
+> buscado = ps.find( p => p.nombre === 'x' )
+undefined
+> ps.filter( p => p.edad > 2)
+[
+  { nombre: 'c', edad: 3, saludar: [Function: saludar] },
+  { nombre: 'd', edad: 4, saludar: [Function: saludar] },
+  { nombre: 'e', edad: 5, saludar: [Function: saludar] }
+]
+> ps.map( p => ({ name: p.nombre }) )
+[
+  { name: 'a' },
+  { name: 'b' },
+  { name: 'c' },
+  { name: 'd' },
+  { name: 'e' }
+]
+
