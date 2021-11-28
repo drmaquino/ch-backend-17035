@@ -1,4 +1,8 @@
+// elegir tu persistencia acá
+const PERS = 'mongodb'
+
 export default {
+    PERS,
     fileSystem: {
         path: './DB'
     },
