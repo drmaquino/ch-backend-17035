@@ -1,0 +1,8 @@
+﻿Realizar el primer desafío, pero esta vez persistiendo las sesiones de usuario en Redis.
+
+Fijar un tiempo de vida de la sesion de 1 minuto que será recargada en cada visita del cliente al sitio.
+
+Acceder con dos clientes distintos y verificar que las sesiones respectivas hayan sido creadas en la base.
+
+Comprobar los datos y el tiempo de vida de las sesiones en la base verificando que cuando se extingan desaparezcan de la misma y que el usuario quede automaticamente deslogueado de su sesion.
+
