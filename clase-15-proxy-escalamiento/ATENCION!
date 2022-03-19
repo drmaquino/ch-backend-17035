@@ -1,0 +1,4 @@
+pm2 no funciona con ESM en Win10.
+[ https://github.com/Unitech/pm2/issues/4819 ]
+error reportado, conocido, y no resuelto
+(al 15/01/2022)

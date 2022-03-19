@@ -5,11 +5,11 @@ const AWS = require('aws-sdk')
 // AWS.config.credentials = credentials
 
 AWS.config.update({
-  region: 'us-east-2',
+  region: 'us-east-1',
 })
 
 const sns = new AWS.SNS()
-const SNS_TOPIC_ARN = 'arn:aws:sns:us-east-2:786671515187:notificaciones'
+const SNS_TOPIC_ARN = 'arn:aws:sns:us-east-1:786671515187:notificaciones'
 
 const dynamodb = new AWS.DynamoDB.DocumentClient()
 const TABLE_NAME = 'product-inventory'

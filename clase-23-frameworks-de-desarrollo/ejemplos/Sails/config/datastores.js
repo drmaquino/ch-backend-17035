@@ -48,10 +48,10 @@ module.exports.datastores = {
     *    (See https://sailsjs.com/config/datastores for help.)                 *
     *                                                                          *
     ***************************************************************************/
-    // adapter: 'sails-mysql',
-    // url: 'mysql://coderhouse:coderhouse@localhost:3306/coderhouse',
-    adapter: 'sails-mongo',
-    url: 'mongodb://localhost/coderhouse',
+    adapter: 'sails-mysql',
+    url: 'mysql://coderhouse:coderhouse@localhost:3306/coderhouse',
+    // adapter: 'sails-mongo',
+    // url: 'mongodb://localhost/coderhouse',
   },
 
 

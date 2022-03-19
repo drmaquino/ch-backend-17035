@@ -2,8 +2,10 @@
 import PersonasDao from './PersonasDaoFile.js'
 
 const generadorDeIds = {
-    id: 1,
-    next() { return this.id++ }
+  id: 1,
+  next() {
+    return this.id++
+  },
 }
 
 const personasDao = new PersonasDao('./personas.txt')
@@ -14,7 +16,12 @@ console.log(await personasDao.getAll())
 
 console.log('-----------------------------')
 console.log('2) Incorporar una persona')
-const persona1 = { nombre: 'Juan', apellido: 'Perez', dni: '30555777', id: generadorDeIds.next() }
+const persona1 = {
+  nombre: 'Juan',
+  apellido: 'Perez',
+  dni: '30555777',
+  id: generadorDeIds.next(),
+}
 console.log(await personasDao.save(persona1))
 
 console.log('-----------------------------')
@@ -23,7 +30,12 @@ console.log(await personasDao.getAll())
 
 console.log('-----------------------------')
 console.log('4) Incorporar otra persona')
-const persona2 = { nombre: 'Pedro', apellido: 'Suarez', dni: '35678907', id: generadorDeIds.next() }
+const persona2 = {
+  nombre: 'Pedro',
+  apellido: 'Suarez',
+  dni: '35678907',
+  id: generadorDeIds.next(),
+}
 console.log(await personasDao.save(persona2))
 
 console.log('-----------------------------')
@@ -36,7 +48,13 @@ console.log(await personasDao.getById(persona2.id))
 
 console.log('--------------------------------')
 console.log('7) Actualizar una persona por su id')
-console.log(await personasDao.updateById(persona2.id, { nombre: 'Ana', apellido: 'Mei', dni: '37123543' }))
+console.log(
+  await personasDao.updateById(persona2.id, {
+    nombre: 'Ana',
+    apellido: 'Mei',
+    dni: '37123543',
+  })
+)
 
 console.log('-----------------------------')
 console.log('8) Obtener todas las personas')

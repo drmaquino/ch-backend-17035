@@ -1,0 +1,29 @@
+diapo 13
+mejorar la definicion de execPath (path del ejecutable. ej: /etc/node)
+no se entiende mucho, y puede confundirse con cwd() (path de ejecucion del programa. ej: /usr/misdocs/main.js)
+
+72
+mejorar el ejemplo del execfile
+
+
+FORK:
+agregar que el nombre del evento de comunicacion entre procesos es siempre 'message'
+
+
+worker threads:
+AGREGAR!
+aca hay un ejemplo facil con fibonacci:
+https://www.section.io/engineering-education/nodejs-worker-thread/
+
+------------------------------------------------------------
+
+mover execPath mas al comienzo de las opciones de process en las diapos
+
+------------------------------------------------------------
+
+AVERIGUAR
+
+adonde va el codigo de error ademas de la descripcion cuando falla algo ejecutado con exec?
+
+echo $?
+
